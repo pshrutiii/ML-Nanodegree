@@ -38,10 +38,10 @@ class LearningAgent(Agent):
             self.trial += 1 # Update additional class parameters as needed
             
             #### Update epsilon using a decay function of your choice
-            self.epsilon = self.epsilon - 0.05 #safety=D, reliability =A+ with n_test=5
+            #self.epsilon = self.epsilon - 0.05 #safety=A, reliability =A+ with n_test=5
             #self.epsilon -= 1.0 / (self.trial**2) 
-            #self.epsilon = math.pow(self.alpha, self.trial) #safety = F, reliability = C
-            
+            self.epsilon = self.epsilon * 0.99
+
         return None
 
     def build_state(self):
@@ -92,6 +92,7 @@ class LearningAgent(Agent):
             if (random.random() < self.epsilon):
                 action = random.choice(self.valid_actions)
                 print ("Epsilon ====>  {}".format(self.epsilon))
+                print ("Trial ====>  {}".format(self.trial))
                 print("Choose Action #2:  random action with epsilon probability --> {}".format(action))
             else: 
                 # Be sure that when choosing an action with highest Q-value that you randomly select between actions that "tie".
@@ -110,7 +111,8 @@ class LearningAgent(Agent):
         # When learning, implement the value iteration update rule
         if self.learning == True:
                 #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-                self.Q[state][action] += self.alpha*(reward-self.Q[state][action])  
+                #self.Q[state][action] += self.alpha*(reward-self.Q[state][action])  
+                self.Q[state][action] = (1-self.alpha)*self.Q[state][action] + self.alpha*reward
         return 
 
     
@@ -177,7 +179,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=5, tolerance =0.05)
+    sim.run(n_test=100, tolerance =0.05)
 
 
 if __name__ == '__main__':

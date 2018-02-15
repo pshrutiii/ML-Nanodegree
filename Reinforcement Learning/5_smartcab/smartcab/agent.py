@@ -38,9 +38,9 @@ class LearningAgent(Agent):
             self.trial += 1 # Update additional class parameters as needed
             
             #### Update epsilon using a decay function of your choice
-            #self.epsilon = self.epsilon - 0.05 #safety=A, reliability =A+ with n_test=5
+            #self.epsilon = self.epsilon - 0.05 
             #self.epsilon -= 1.0 / (self.trial**2) 
-            self.epsilon = self.epsilon * 0.99
+            self.epsilon = self.epsilon * 0.999  #from udacity forum
 
         return None
 
@@ -96,8 +96,8 @@ class LearningAgent(Agent):
                 print("Choose Action #2:  random action with epsilon probability --> {}".format(action))
             else: 
                 # Be sure that when choosing an action with highest Q-value that you randomly select between actions that "tie".
-                possibleActions = [k for k, v  in self.Q[state].items() if v == self.get_maxQ(state)]
-                action = random.choice(possibleActions)
+                actionsToChooseFrom = [k for k, v  in self.Q[state].items() if v == self.get_maxQ(state)]
+                action = random.choice(actionsToChooseFrom)
                 print("Choose Action #3: choosing action with Highest Q-value --> {}".format(action))
 
         return action
@@ -124,20 +124,10 @@ class LearningAgent(Agent):
 
         state = self.build_state()          # Get current state
         self.createQ(state)                 # Create 'state' in Q-table
-        #print "############## CHECK ############"
-        #print self.Q
         action = self.choose_action(state)  # Choose an action
         reward = self.env.act(self, action) # Receive a reward
         self.learn(state, action, reward)   # Q-learn
-        #print "############## CHECK 2 ############"
-        #print printQ(self)
-
         return
-        
-def printQ(self):
-        for s in self.Q:
-            print s 
-            print self.Q[s]   
             
 def run():
     """ Driving function for running the simulation. 
@@ -157,7 +147,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning=True, alpha=0.5)
+    agent = env.create_agent(LearningAgent, learning=True, alpha=0.5, epsilon=1)
     
     ##############
     # Follow the driving agent

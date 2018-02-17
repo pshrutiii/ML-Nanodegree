@@ -30,4 +30,4 @@ This project contains three files:
 - `visuals.py`: supplementary file to help visualize (graph) and filter by features using 'survival_stats' method
 
 ### What's Next?
-Using the full dataset try to redo the project applying `Decision Trees`!
+Using the full dataset try to redo the project applying `Decision Trees`! 

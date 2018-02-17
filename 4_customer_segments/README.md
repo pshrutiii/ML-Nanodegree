@@ -1,4 +1,4 @@
-## Project 3: Creating Customer Segments
+## Project 4: Creating Customer Segments
 GOAL: Using unsupervised learning techniques, find meaningful relationships hidden between customers of a wholesale distributor in Lisbon, Portugal. The wholesale distributor wants to make informed business decision of changing their delivery method from a morning delivery service five days a week to a cheaper evening delivery service three days a week. See if any similarities exist between customers, and how to best segment customers into distinct categories.
 
 ### Software Requirements

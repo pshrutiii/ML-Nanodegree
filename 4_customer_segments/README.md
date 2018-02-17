@@ -1,4 +1,4 @@
-## Project 4: Creating Customer Segments
+## Project 3: Creating Customer Segments
 GOAL: Using unsupervised learning techniques, find meaningful relationships hidden between customers of a wholesale distributor in Lisbon, Portugal. The wholesale distributor wants to make informed business decision of changing their delivery method from a morning delivery service five days a week to a cheaper evening delivery service three days a week. See if any similarities exist between customers, and how to best segment customers into distinct categories.
 
 ### Software Requirements
@@ -10,9 +10,7 @@ GOAL: Using unsupervised learning techniques, find meaningful relationships hidd
 - Jupyter Notebook
 
 ## Data
-The customer segments data contains 440 data points collected on data found from clients of a wholesale distributor in Lisbon, Portugal.
-
-Note: (m.u.) = *monetary units*.
+The customer segments data contains 440 data points (Note: (m.u.) = *monetary units*)
 
 **Features**
 1) `Fresh`: annual spending (m.u.) on fresh products (Continuous); 
@@ -37,4 +35,4 @@ This project contains three files:
 - Finding meaningful way to get info out of clustered data 
 
 ### What's Next?
-Using the full dataset (fromhttps://archive.ics.uci.edu/ml/datasets/Wholesale+customers) try to ....
+Using the full dataset (from https://archive.ics.uci.edu/ml/datasets/Wholesale+customers) try to ....

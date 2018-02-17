@@ -10,6 +10,7 @@ GOAL: In 1912, the ship RMS Titanic struck an iceberg on its maiden voyage and s
 
 ### Data
 The modified Titanic data contains 11 features:
+
 **Features**
 - `pclass` : Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)
 - `name` : Name

@@ -10,13 +10,12 @@ GOAL: Apply basic machine learning concepts to assist you and a client with find
 - Jupyter Notebook
 
 ### Data
-The modified Boston housing dataset consists of 490 data points, with each datapoint having 3 features:
+The modified Boston housing dataset consists of 490 data points, with each datapoint having 4 features:
+
 **Features**
 1.  `RM`: average number of rooms per dwelling
 2. `LSTAT`: percentage of population considered lower status
 3. `PTRATIO`: pupil-student ratio by town
-
-**Target Variable**
 4. `MEDV`: median value of owner-occupied homes
 
 This project contains three files:

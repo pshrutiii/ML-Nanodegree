@@ -29,7 +29,7 @@ This project contains:
 
 - `/logs/`: after you run simulations, files would be generated here
 - `/images/`: if you turn on GUI, you can see traffic in action using pygame
-- `/smartcab/`: has pythong files that create environment, GUI interface, simulation, and agents.
+- `/smartcab/`: has python files that create environment, GUI interface, simulation, and agents.
 	- `agent.py`: main file
 	- `environment.py`: creates environment
 	- `planner.py`: high-level planner for the agent to follow towards a set goal
@@ -40,5 +40,3 @@ This project contains:
 ### Key take aways:
 - Implement Q-Learning to guide the agent
 - How to use Exploration-Exploitation factors
-
-### What's Next?

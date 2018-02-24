@@ -48,5 +48,3 @@ This project contains two files:
 
 - `student_intervention.ipynb`: main file
 - `student-data.csv`: dataset
-
-### What's Next?

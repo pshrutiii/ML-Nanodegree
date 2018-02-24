@@ -31,4 +31,4 @@ This project contains three files:
 - Evaluate a model's performance on unseen data using previous data.
 
 ### What's Next?
-Using the full dataset (from https://archive.ics.uci.edu/ml/datasets/Housing) try to ........
+Maybe redo using full dataset (from https://archive.ics.uci.edu/ml/datasets/Housing)

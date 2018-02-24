@@ -35,4 +35,4 @@ This project contains three files:
 - Finding meaningful way to get info out of clustered data 
 
 ### What's Next?
-Using the full dataset (from https://archive.ics.uci.edu/ml/datasets/Wholesale+customers) try to ....
+Redo using full dataset (from https://archive.ics.uci.edu/ml/datasets/Wholesale+customers)
